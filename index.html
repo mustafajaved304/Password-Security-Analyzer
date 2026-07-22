@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Password Security Toolkit</title>
+<script src="script.js" defer></script>
+
+<style>
+body {
+    background:#0f172a;
+    color:#e5e7eb;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:40px;
+}
+h1 {
+    text-align:center;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+.container {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:30px;
+}
+.panel {
+    background:#020617;
+    border:1px solid #334155;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(56,189,248,0.15);
+}
+.panel h2 {
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+.panel p {
+    color:#94a3b8;
+    font-size:14px;
+}
+textarea, input {
+    width:100%;
+    margin-top:10px;
+    background:#020617;
+    color:#e5e7eb;
+    border:1px solid #334155;
+    border-radius:6px;
+    padding:10px;
+}
+textarea {
+    height:120px;
+}
+button {
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    background:#38bdf8;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+footer {
+    text-align:center;
+    margin-top:40px;
+    font-size:13px;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🛡 Password Security Toolkit</h1>
+
+<div class="container">
+
+    <!-- PASSWORD ANALYZER PANEL -->
+    <div class="panel">
+        <h2>🔍 Password Analyzer</h2>
+        <p>Analyze passwords against attacks, breaches, policies, and security standards.</p>
+
+        <textarea id="passwords" placeholder="Enter one password per line"></textarea>
+
+        <button onclick="goToDashboard()">Analyze Password(s)</button>
+    </div>
+
+    <!-- PASSWORD GENERATOR PANEL -->
+    <div class="panel">
+        <h2>🔐 Secure Password Generator</h2>
+        <p>Generate NIST-compliant secure passwords using cryptographic randomness.</p>
+
+        <label>Password Length (12–24)</label>
+        <input type="number" id="pwLength" min="12" max="24" value="16">
+
+        <button onclick="generatePassword()">Generate Secure Password</button>
+
+        <textarea id="generatedPassword" readonly
+                  placeholder="Generated password will appear here"></textarea>
+
+        <button onclick="useGeneratedPassword()">Analyze Generated Password</button>
+    </div>
+
+</div>
+
+<footer>
+    Project by <b>Mustafa Mehmood Javed</b>  
+    <br>Network Security Practical Project
+</footer>
+
+</body>
+</html>

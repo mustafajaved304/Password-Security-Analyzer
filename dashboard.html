@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body { background:#020617; color:#e5e7eb; font-family:Arial; padding:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:15px; }
+    .card { background:#020617; border:1px solid #334155; padding:15px; border-radius:8px; }
+    .pass { border-color:#22c55e; }
+    .fail { border-color:#ef4444; }
+    button { padding:10px; background:#38bdf8; border:none; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+<h1>🛡 Password Security Dashboard</h1>
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>📊 Password Summary</h2>
+<canvas id="riskChart" width="400"></canvas>
+
+<h2>🔍 Password Analysis</h2>
+<div id="cardsContainer" class="grid"></div>
+
+<h2>📜 Policy Compliance</h2>
+<div id="policyRules" class="grid"></div>
+
+<h2>⚔️ Attack Simulation</h2>
+<div id="attackSimulation" class="grid"></div>
+
+<h2>🛡 Security Standards</h2>
+<div id="standardsCompliance" class="grid"></div>
+
+<h2>🚨 Breach Status</h2>
+<div id="breachStatus" class="grid"></div>
+
+</body>
+</html>
